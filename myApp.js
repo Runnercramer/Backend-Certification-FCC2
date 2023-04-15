@@ -9,6 +9,11 @@ app.get("/", function(req, res){
     res.sendFile(filePath);
 })
 
+let assetsPath = __dirname + '/public';
+
+app.use("/public", express.static(assetsPath));
+
+
 
 
 
